@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_num: 1
-  speed: 0.05
+  speed: 0.003
 --- !u!1 &1117444784
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 1117444784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.388711, y: 7.388711, z: 7.388711}
+  m_LocalScale: {x: 5.494762, y: 5.494762, z: 5.494762}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1829293381}
@@ -297,7 +297,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
-  m_MaskAlphaCutoff: 0.2
+  m_MaskAlphaCutoff: 1
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_num: 0
-  speed: 0.05
+  speed: 0.003
 --- !u!1 &1924751240
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +600,7 @@ Transform:
   m_GameObject: {fileID: 2065195120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.388711, y: 7.388711, z: 7.388711}
+  m_LocalScale: {x: 5.4947624, y: 5.4947624, z: 5.4947624}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 354723559}
@@ -648,7 +648,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
-  m_MaskAlphaCutoff: 0.2
+  m_MaskAlphaCutoff: 1
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
