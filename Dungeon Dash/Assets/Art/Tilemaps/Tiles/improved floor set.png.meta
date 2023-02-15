@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dfbf63e702bbfee4e9ef2f5edb1a52db
+guid: 3f7756e26c6205747aaf80ea35a7e8c9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_0
+      name: improved floor set_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fe9ed552c1bc44c90ee110fe9e608b
-      internalID: 391814252
+      spriteID: 3356cc435b142ff468ff27cbb1954db3
+      internalID: 1373185943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_1
+      name: improved floor set_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b9e80307414da141912ef5146119b24
-      internalID: -1166880320
+      spriteID: 21a1ad1e0922d064281138888ac6e2f9
+      internalID: -1437482664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_2
+      name: improved floor set_2
       rect:
         serializedVersion: 2
         x: 48
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b976014ea232b4f42af25e2b10f16ee9
-      internalID: -1375318474
+      spriteID: a0356a9b8a0850d479d920a5429f4162
+      internalID: -1206797419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_3
+      name: improved floor set_3
       rect:
         serializedVersion: 2
         x: 80
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a4fa05c786edf44bbb33db6e769d9f4
-      internalID: 1875307887
+      spriteID: 4aec8c3786699ee4d8728b53720b1dfd
+      internalID: 192563242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_4
+      name: improved floor set_4
       rect:
         serializedVersion: 2
         x: 16
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 265814d0cf9e1ec4998c09e9cf83b1c3
-      internalID: 1531837335
+      spriteID: fda519e5153d97747b86d8321bef55c5
+      internalID: -963902344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_5
+      name: improved floor set_5
       rect:
         serializedVersion: 2
         x: 48
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9652dcf203357c1438852687113be881
-      internalID: -1139533525
+      spriteID: ee67d1a51c09b2e4a9dff9ba4ece2371
+      internalID: 1855971929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-0 (3)_6
+      name: improved floor set_6
       rect:
         serializedVersion: 2
         x: 32
@@ -257,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2374614dd5011ac48adf7b24806e5b90
-      internalID: -71958417
+      spriteID: ddbc9767998333a46a723882a1f4878a
+      internalID: 320896340
       vertices: []
       indices: 
       edges: []
@@ -274,13 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pixil-frame-0 (3)_6: -71958417
-      pixil-frame-0 (3)_1: -1166880320
-      pixil-frame-0 (3)_3: 1875307887
-      pixil-frame-0 (3)_2: -1375318474
-      pixil-frame-0 (3)_0: 391814252
-      pixil-frame-0 (3)_4: 1531837335
-      pixil-frame-0 (3)_5: -1139533525
+      improved floor set_3: 192563242
+      improved floor set_5: 1855971929
+      improved floor set_0: 1373185943
+      improved floor set_6: 320896340
+      improved floor set_1: -1437482664
+      improved floor set_2: -1206797419
+      improved floor set_4: -963902344
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
