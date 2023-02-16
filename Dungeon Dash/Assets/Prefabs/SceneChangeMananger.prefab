@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5402498018065495938}
   - component: {fileID: 5402498018065495939}
   - component: {fileID: 5402498018065495943}
+  - component: {fileID: 1875620042}
   m_Layer: 0
   m_Name: Crossfade
   m_TagString: Untagged
@@ -169,6 +170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 1.5
+--- !u!225 &1875620042
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402498018065496061}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5402498018076206963
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +193,6 @@ GameObject:
   - component: {fileID: 5402498018076206962}
   - component: {fileID: 5402498018076206967}
   - component: {fileID: 5402498018076206960}
-  - component: {fileID: 5402498018076206966}
   m_Layer: 5
   m_Name: Fade Panel
   m_TagString: Untagged
@@ -246,15 +258,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &5402498018076206966
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402498018076206963}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
