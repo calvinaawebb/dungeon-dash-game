@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: pixil-frame-0 (3)_3
+  m_Name: improved floor set_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1875307887, guid: dfbf63e702bbfee4e9ef2f5edb1a52db, type: 3}
+  m_Sprite: {fileID: 192563242, guid: 3f7756e26c6205747aaf80ea35a7e8c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
