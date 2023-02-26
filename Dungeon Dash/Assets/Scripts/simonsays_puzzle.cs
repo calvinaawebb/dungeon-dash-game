@@ -1,49 +1,89 @@
-using System.Data;
-using System.ComponentModel.DataAnnotations.Schema;
-using Internal;
-using System.Collections.Specialized;
-using System.Net.Http.Headers;
-using System.Security.Cryptography;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class simonsays_puzzle : MonoBehaviour
 {
+    public static List<int> randKeys = new List<int>();
+    int loop = 0;
+    int index = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        int[] keyPattern = [];
-        for (int i = 0; i < 4; i++) {
-            keyPattern.Add(Random.Range(0,4));
-            Console.WriteLine(keyPattern);
-        }
+         for (int i = 0; i<4; i++) {
+            randKeys.Add(Random.Range(1,4));
+         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        i = 0;
-        switch (keyPattern[i])
-        {
-            case 1:
-                if (Input.GetKeyDown(KeyCode.W)) {
-                    if (i < keyPatten.Count) {
-                        Console.WriteLine("detected");
-                        return True;
+        while (loop < 1) {
+            switch(randKeys[index]) {
+                case 1:
+                    if (index > 4)
+                    {
+                        loop++;
+                        break;
+                    }
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        index++;
                         break;
                     }
                     else
                     {
-                        i++;
                         break;
                     }
-                }
-                else {
-                    break;
-                }
-            default:
+                case 2:
+                    if (index > 4)
+                    {
+                        loop++;
+                        break;
+                    }
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        index++;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                case 3:
+                    if (index > 4)
+                    {
+                        loop++;
+                        break;
+                    }
+                    if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        index++;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                case 4:
+                    if (index > 4)
+                    {
+                        loop++;
+                        break;
+                    }
+                    if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        index++;
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+            }
         }
     }
 }
