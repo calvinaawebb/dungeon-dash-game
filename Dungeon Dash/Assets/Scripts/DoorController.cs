@@ -12,7 +12,7 @@ public class DoorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,14 +21,18 @@ public class DoorController : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other){
+    void OnTriggerEnter2D(Collider2D other)
+    {
         player = other.gameObject.GetComponent<Player_Controller>();
         player.isStunned = true;
         puzzleObject.SetActive(true);
-        puzzleObject.GetComponent<DialPuzzle>().playerNum = player.player_num;
+        DialPuzzle puzzleScript = puzzleObject.GetComponent<DialPuzzle>();
+        puzzleScript.playerNum = player.player_num;
+        puzzleScript.myDoor = this;
     }
 
-    public void OpenDoor(){
+    public void OpenDoor()
+    {
         player.isStunned = false;
         this.gameObject.SetActive(false);
     }

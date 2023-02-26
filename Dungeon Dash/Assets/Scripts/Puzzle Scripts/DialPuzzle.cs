@@ -25,22 +25,26 @@ public class DialPuzzle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         int input = 0;
-        if(Input.GetAxis("Horizontal_" + playerNum) != 0){
-            input = (int)(Mathf.Abs(Input.GetAxis("Horizontal_" + playerNum))/Input.GetAxis("Horizontal_" + playerNum)); //-1, 0, or 1. No smoothing will happen.
+        if (Input.GetAxis("Horizontal_" + playerNum) != 0)
+        {
+            input = (int)(Mathf.Abs(Input.GetAxis("Horizontal_" + playerNum)) / Input.GetAxis("Horizontal_" + playerNum)); //-1, 0, or 1. No smoothing will happen.
         }
 
-        if(inVal != input){
+        if (inVal != input)
+        {
             inVal = input;
             currentForce = jolt * inVal * -1f;
         }
 
-        if(inVal == 0f){
+        if (inVal == 0f)
+        {
             currentForce = 0f;
         }
-        else{
+        else
+        {
             currentForce += spinAccleration * inVal * -1f;
             velocity += currentForce;
         }
@@ -49,7 +53,8 @@ public class DialPuzzle : MonoBehaviour
         rotationVector.z += velocity;
         myDial.rotation = Quaternion.Euler(rotationVector);
 
-        if(rotationVector.z > 177f && rotationVector.z < 183f && Mathf.Abs(velocity) < 0.01f){ //beat puzzle condition
+        if (rotationVector.z > 177f && rotationVector.z < 183f && Mathf.Abs(velocity) < 0.01f)
+        { //beat puzzle condition
             myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
             this.gameObject.SetActive(false);
         }

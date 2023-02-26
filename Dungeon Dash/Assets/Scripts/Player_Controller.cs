@@ -15,13 +15,14 @@ public class Player_Controller : MonoBehaviour
     void Start()
     {
 
-        
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (!isStunned){
+        if (!isStunned)
+        {
             //player movement
             Vector3 pos = transform.localPosition;
             pos.x += Input.GetAxis("Horizontal_" + player_num) * speed; //change vertical position based on input from specific player
