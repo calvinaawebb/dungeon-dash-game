@@ -29,6 +29,8 @@ public class DoorController : MonoBehaviour
         DialPuzzle puzzleScript = puzzleObject.GetComponent<DialPuzzle>();
         puzzleScript.playerNum = player.player_num;
         puzzleScript.myDoor = this;
+        puzzleScript.velocity = puzzleScript.startVelocity;
+        
     }
 
     public void OpenDoor()

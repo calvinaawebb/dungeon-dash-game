@@ -53,7 +53,7 @@ public class DialPuzzle : MonoBehaviour
         rotationVector.z += velocity;
         myDial.rotation = Quaternion.Euler(rotationVector);
 
-        if (rotationVector.z > 177f && rotationVector.z < 183f && Mathf.Abs(velocity) < 0.01f)
+        if (rotationVector.z > 177f && rotationVector.z < 183f && Mathf.Abs(velocity) < 0.03f)
         { //beat puzzle condition
             myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
             this.gameObject.SetActive(false);
