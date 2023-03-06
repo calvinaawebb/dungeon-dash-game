@@ -7,7 +7,6 @@ public class Player_Controller : MonoBehaviour
 
     public int player_num; //which player, 0 or 1? Declare in Unity Inspector
     public float speed; //how fast can character move? (could change...?)
-
     public bool isStunned = false; //becomes true to penalize player or to keep them from walking around when doing puzzles.
 
 
