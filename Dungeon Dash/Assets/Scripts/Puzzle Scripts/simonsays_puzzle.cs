@@ -12,20 +12,22 @@ public class simonsays_puzzle : MonoBehaviour
     public Transform highlighterTransform;
     public int playerNum; //0 or 1
     int index;
-    int puzzleLength;
+    int puzzleLength = 4;
 
     // Start is called before the first frame update
     void Start()
     {
         restart(); //basically sets up the whole puzzle
+        Debug.Log("Started");
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(index > 4) {
+        if(index > puzzleLength) {
             myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
             this.gameObject.SetActive(false);
+            Debug.Log("Endcall");
         }
         switch (randKeys[index]) {
             case 1:
@@ -75,37 +77,38 @@ public class simonsays_puzzle : MonoBehaviour
     // IEnumerator is needed so that you can wait
     IEnumerator showTiles()
     {
+        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0,0,0);
         yield return new WaitForSeconds(1); //basically functions as wait(1);
-        for (int i=0; i < 4; i++) //loops through all the keys and shows each 1 at a time
+        for (int i=0; i < puzzleLength; i++) //loops through all the keys and shows each 1 at a time
         {
             switch (randKeys[i])
             {
                 case 1:
-                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.position = new Vector3(0, 0.5f, 0); //1 = up
+                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0.5f, 0); //1 = up
                     break;
                 case 2:
-                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.position = new Vector3(-0.5f, 0, 0); //2 = left
+                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(-0.5f, 0, 0); //2 = left
                     break;
                 case 3:
-                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.position = new Vector3(0, -0.5f, 0); //3 = down
+                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, -0.5f, 0); //3 = down
                     break;
                 case 4:
-                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.position = new Vector3(0.5f, 0, 0); //4 = right
+                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0.5f, 0, 0); //4 = right
                     break;
             }
             yield return new WaitForSeconds(0.3f);
-            IHATEUNITYAAAAAAAAAAAAAAAA.transform.position = new Vector3(0, 0, 0);
+            IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0, 0);
             yield return new WaitForSeconds(0.3f);
         }
     }
 
     void restart()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < puzzleLength; i++)
         {
             randKeys.Add(Random.Range(1, 5)); //sets the list of keys the player has to press
         }
-        showTiles();
+        StartCoroutine(showTiles());
         index = 0;
     }
 }
