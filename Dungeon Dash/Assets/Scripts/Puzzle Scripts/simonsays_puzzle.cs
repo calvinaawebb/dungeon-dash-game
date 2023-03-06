@@ -11,8 +11,8 @@ public class simonsays_puzzle : MonoBehaviour
     public GameObject IHATEUNITYAAAAAAAAAAAAAAAA; //the highlighter square
     public Transform highlighterTransform;
     public int playerNum; //0 or 1
-    bool loop = true;
     int index;
+    int puzzleLength;
 
     // Start is called before the first frame update
     void Start()
@@ -23,45 +23,60 @@ public class simonsays_puzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* while (loop) {
-            if (index > 4)
-            {
-                loop = false;
+        if(index > 4) {
+            myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
+            this.gameObject.SetActive(false);
+        }
+        switch (randKeys[index]) {
+            case 1:
+                if (Input.GetAxis("Vertical_" + playerNum) > 0)
+                    {
+                        index++;
+                    }
+                else if (Input.GetAxis("Vertical_" + playerNum) < 0 || Input.GetAxis("Horizontal_" + playerNum) != 0)
+                    {
+                        restart();
+                    }
+                break;
+            case 2:
+                if (Input.GetAxis("Horizontal_" + playerNum) < 0)
+                    {
+                        index++;
+                    }
+                else if (Input.GetAxis("Horizontal_" + playerNum) > 0 || Input.GetAxis("Vertical_" + playerNum) != 0)
+                    {
+                        restart();
+                    }
+                break;
+            case 3:
+                if (Input.GetAxis("Vertical_" + playerNum) < 0)
+                    {
+                        index++;
+                    }
+                else if (Input.GetAxis("Vertical_" + playerNum) > 0 || Input.GetAxis("Horizontal_" + playerNum) != 0)
+                    {
+                        restart();
+                    }
+                break;
+            case 4:
+                if (Input.GetAxis("Horizontal_" + playerNum) > 0)
+                    {
+                        index++;
+                    }
+                else if (Input.GetAxis("Horizontal_" + playerNum) < 0 || Input.GetAxis("Vertical_" + playerNum) != 0)
+                    {
+                        restart();
+                    }
+                break;
             }
-            switch (randKeys[index]) {
-                case 1:
-                    if (Input.GetKeyDown(KeyCode.W))
-                    {
-                        index++;
-                    }
-                    break;
-                case 2:
-                    if (Input.GetKeyDown(KeyCode.A))
-                    {
-                        index++;
-                    }
-                    break;
-                case 3:
-                    if (Input.GetKeyDown(KeyCode.S))
-                    {
-                        index++;
-                    }
-                    break;
-                case 4:
-                    if (Input.GetKeyDown(KeyCode.D))
-                    {
-                        index++;
-                    }
-                    break;
-            }
-        }*/
-    }
+        }
+
 
     // IEnumerator is needed so that you can wait
     IEnumerator showTiles()
     {
         yield return new WaitForSeconds(1); //basically functions as wait(1);
-        for (int i=0; i<4; i++) //loops through all the keys and shows each 1 at a time
+        for (int i=0; i < 4; i++) //loops through all the keys and shows each 1 at a time
         {
             switch (randKeys[i])
             {
@@ -83,11 +98,6 @@ public class simonsays_puzzle : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
         }
     }
-
-    /* { //beat puzzle condition
-            myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
-            this.gameObject.SetActive(false);
-        } */
 
     void restart()
     {
