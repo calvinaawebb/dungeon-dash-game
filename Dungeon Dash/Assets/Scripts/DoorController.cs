@@ -30,7 +30,7 @@ public class DoorController : MonoBehaviour
         puzzleScript.playerNum = player.player_num;
         puzzleScript.myDoor = this;
         puzzleScript.velocity = puzzleScript.startVelocity;
-
+        
     }
 
     public void OpenDoor()

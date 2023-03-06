@@ -31,8 +31,12 @@ public class FallingBlocksDodge : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 player = this.transform.GetChild(0).transform.position;
-        this.transform.GetChild(0).transform.position = new Vector3(player.x + (Input.GetAxis("Horizontal_" + playerNum) * playerSpeed), player.y, 0);
+        Vector3 player = this.transform.GetChild(0).transform.localPosition;
+        if(!(player.x <= -0.888 && Input.GetAxis("Horizontal_" + playerNum) < 0) || (player.x >= 0.888 && Input.GetAxis("Horizontal_" + playerNum) > 0))
+        {
+            this.transform.GetChild(0).transform.localPosition = new Vector3(player.x + (Input.GetAxis("Horizontal_" + playerNum) * playerSpeed), player.y, 0);
+        }
+        
     }
 
     public void IncreaseScore()
@@ -44,6 +48,7 @@ public class FallingBlocksDodge : MonoBehaviour
     {
         GameObject brick = Instantiate(brickPrefab, new Vector3(Random.Range(-0.9f, 0.9f) + this.transform.position.x, 1.26100004f + this.transform.position.y, 0f), new Quaternion(0, 0, 0, 1), this.transform);
         brick.GetComponent<DodgeBrick>().myPuzzle = this;
+        brick.SetActive(true);
         yield return new WaitForSeconds(1);
         StartCoroutine(DropBlock());
     }
