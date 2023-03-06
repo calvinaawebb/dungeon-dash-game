@@ -7,8 +7,6 @@ public class Player_Controller : MonoBehaviour
 
     public int player_num; //which player, 0 or 1? Declare in Unity Inspector
     public float speed; //how fast can character move? (could change...?)
-    public Quaternion current = new Quaternion.Euler(0,0,0);
-
     public bool isStunned = false; //becomes true to penalize player or to keep them from walking around when doing puzzles.
 
 
@@ -55,8 +53,7 @@ public class Player_Controller : MonoBehaviour
             switch (Input.GetAxis("Horizontal_" + player_num))
             {
                 case > 0:
-                    Quaternion
-                    gameObject.transform.rotation = Quaternion.Euler(0, 0, (Input.GetAxis("Horizontal_" + player_num)*Quaternion.Angle(Quaternion.Euler(0,0,1), (Quaternion.Angle(gameObject.transform.rotation, Quaternion.Euler(0,0,90)) >= 90f ? gameObject.transform.rotation * Quaternion.Inverse(Quaternion.Euler(0, 0, 90)) : gameObject.transform.rotation * Quaternion.Euler(0, 0, 90)))));
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
                     break;
                 case -1:
                     gameObject.transform.rotation = Quaternion.Euler(0, 0, -90);
