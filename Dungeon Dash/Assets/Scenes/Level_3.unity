@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-  %YAML 1.1
-=======
 %YAML 1.1
->>>>>>> Stashed changes
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
 OcclusionCullingSettings:
@@ -127,7 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &2820933
 GameObject:
   m_ObjectHideFlags: 0
@@ -11985,5 +11980,3 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
-=======
->>>>>>> Stashed changes
