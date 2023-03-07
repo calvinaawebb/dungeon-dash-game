@@ -27,6 +27,7 @@ public class DoorController : MonoBehaviour
         player.isStunned = true;
         puzzleObject.SetActive(true);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         DialPuzzle puzzleScript = puzzleObject.GetComponent<DialPuzzle>();
         puzzleScript.playerNum = player.player_num;
         puzzleScript.myDoor = this;
@@ -42,6 +43,19 @@ public class DoorController : MonoBehaviour
         {
             simonsays_puzzle puzzleScript = puzzleObject.GetComponent<simonsays_puzzle>();
             puzzleScript.playerNum = 0;
+=======
+        if (puzzleObject.GetComponent<DialPuzzle>() != null)
+        {
+            DialPuzzle puzzleScript = puzzleObject.GetComponent<DialPuzzle>();
+            puzzleScript.playerNum = player.player_num;
+            puzzleScript.myDoor = this;
+            puzzleScript.velocity = puzzleScript.startVelocity;
+        }
+        else if (puzzleObject.GetComponent<DialPuzzle>() != null)
+        {
+            simonsays_puzzle puzzleScript = puzzleObject.GetComponent<simonsays_puzzle>();
+            puzzleScript.playerNum = player.player_num;
+>>>>>>> Stashed changes
             puzzleScript.myDoor = this;
         }
         else if (puzzleObject.GetComponent<FallingBlocksDodge>() != null)
@@ -51,7 +65,10 @@ public class DoorController : MonoBehaviour
             puzzleScript.myDoor = this;
         }
 
+<<<<<<< Updated upstream
 
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 
