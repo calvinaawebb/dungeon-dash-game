@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class simonsays_puzzle : MonoBehaviour
 {
-    public static int[] randKeys = { 0, 0, 0, 0, 0 };
+    int[] randKeys = { 0, 0, 0, 0, 0 };
     public DoorController myDoor;
     public GameObject IHATEUNITYAAAAAAAAAAAAAAAA; //the highlighter square
     public GameObject restartFeedbackSquare; //tells the player when they failed
