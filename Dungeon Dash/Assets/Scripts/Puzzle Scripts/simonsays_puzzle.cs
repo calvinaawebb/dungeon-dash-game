@@ -97,7 +97,7 @@ public class simonsays_puzzle : MonoBehaviour
     {
 
         IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0, 0);
-        yield return new WaitForSeconds(1); //basically functions as wait(1);
+        yield return new WaitForSeconds(0.2f); //basically functions as wait(1);
         IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(1); //basically functions as wait(1);
         for (int i = 0; i < puzzleLength; i++) //loops through all the keys and shows each 1 at a time
