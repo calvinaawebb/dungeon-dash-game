@@ -707,6 +707,9 @@ MonoBehaviour:
   player_num: 1
   speed: 0.02
   isStunned: 0
+  curAngle: {x: 0, y: 0, z: 0, w: 0}
+  curAngle2: {x: 0, y: 0, z: 0, w: 0}
+  angleTo: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &354723562
 Rigidbody2D:
   serializedVersion: 4
@@ -2279,6 +2282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8932868836880807973, guid: da25e166e9e454954adff809f796c5a8, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8932868836880807975, guid: da25e166e9e454954adff809f796c5a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3135,6 +3142,9 @@ MonoBehaviour:
   player_num: 0
   speed: 0.02
   isStunned: 0
+  curAngle: {x: 0, y: 0, z: 0, w: 0}
+  curAngle2: {x: 0, y: 0, z: 0, w: 0}
+  angleTo: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &1829293383
 Rigidbody2D:
   serializedVersion: 4

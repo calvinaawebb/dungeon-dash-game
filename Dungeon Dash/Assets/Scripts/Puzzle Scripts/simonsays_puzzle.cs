@@ -38,14 +38,14 @@ public class simonsays_puzzle : MonoBehaviour
         instructionsGiven = false;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (index >= puzzleLength)
         { //if this is true, then the player has completed the whole code
             myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
             this.gameObject.SetActive(false);
         }
-        else if (!instructionsGiven)
+        else if (instructionsGiven == false)
         {
             //do nothing, because we're still in the showTiles IEnumerator
         }
@@ -96,7 +96,9 @@ public class simonsays_puzzle : MonoBehaviour
     IEnumerator showTiles()
     {
 
-        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0, 0);
+        yield return new WaitForSeconds(1); //basically functions as wait(1);
+        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0, 0);
         yield return new WaitForSeconds(1); //basically functions as wait(1);
         for (int i = 0; i < puzzleLength; i++) //loops through all the keys and shows each 1 at a time
         {
@@ -145,9 +147,8 @@ public class simonsays_puzzle : MonoBehaviour
         // {
         //     randKeys[i] = Random.Range(1, 5); //sets the list of keys the player has to press
         // }
-        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-        StartCoroutine(showTiles());
         index = 0;
+        StartCoroutine(showTiles());
     }
 
     int squareInput() //returns what square the player wanted to input given the key presses; if you ever see squareInput(), just think input

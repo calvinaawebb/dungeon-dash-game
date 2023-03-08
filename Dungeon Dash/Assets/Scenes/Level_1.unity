@@ -604,6 +604,9 @@ MonoBehaviour:
   player_num: 1
   speed: 0.02
   isStunned: 0
+  curAngle: {x: 0, y: 0, z: 0, w: 0}
+  curAngle2: {x: 0, y: 0, z: 0, w: 0}
+  angleTo: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &354723562
 Rigidbody2D:
   serializedVersion: 4
@@ -2295,6 +2298,9 @@ MonoBehaviour:
   player_num: 0
   speed: 0.02
   isStunned: 0
+  curAngle: {x: 0, y: 0, z: 0, w: 0}
+  curAngle2: {x: 0, y: 0, z: 0, w: 0}
+  angleTo: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &1829293383
 Rigidbody2D:
   serializedVersion: 4
@@ -8223,7 +8229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

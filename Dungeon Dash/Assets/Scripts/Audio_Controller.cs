@@ -20,8 +20,16 @@ public class Audio_Controller : MonoBehaviour
     public bool running = true;
     private int flip = 0;
 
-    void Awake(){
-        DontDestroyOnLoad(this.gameObject);
+    void Awake()
+    {
+        if (GameObject.FindGameObjectsWithTag("Audio").Length == 1)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void Start()
@@ -54,7 +62,7 @@ public class Audio_Controller : MonoBehaviour
             // Flip between two audio sources so that the loading process of one does not interfere with the one that's playing out
             flip = 1 - flip;
 
-            if(flip == 0)
+            if (flip == 0)
             {
                 running = false;
             }

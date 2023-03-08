@@ -21,7 +21,7 @@ public class FallingBlocksDodge : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         Debug.Log(bricksDropped);
@@ -31,16 +31,11 @@ public class FallingBlocksDodge : MonoBehaviour
             myDoor.OpenDoor(); //open the door (this will also unfreeze the player)
             this.gameObject.SetActive(false);
         }
-    }
-
-    void FixedUpdate()
-    {
         Vector3 player = this.transform.GetChild(0).transform.localPosition;
         if (!(player.x <= -0.888 && Input.GetAxisRaw("Horizontal_" + playerNum) < 0) && !(player.x >= 0.888 && Input.GetAxisRaw("Horizontal_" + playerNum) > 0))
         {
             this.transform.GetChild(0).transform.localPosition = new Vector3(player.x + (Input.GetAxisRaw("Horizontal_" + playerNum) * playerSpeed), player.y, 0);
         }
-
     }
 
     public void IncreaseScore()
