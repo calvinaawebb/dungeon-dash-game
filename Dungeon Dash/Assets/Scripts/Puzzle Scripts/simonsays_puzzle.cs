@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class simonsays_puzzle : MonoBehaviour
 {
-    public static List<int> randKeys = new List<int>();
+    public static int[] randKeys = { 0, 0, 0, 0, 0 };
     public DoorController myDoor;
     public GameObject IHATEUNITYAAAAAAAAAAAAAAAA; //the highlighter square
     public GameObject restartFeedbackSquare; //tells the player when they failed
@@ -21,14 +21,21 @@ public class simonsays_puzzle : MonoBehaviour
 
     void Start()
     {
+        newGame();
+    }
+
+    public void newGame()
+    { //basically just Start() but you can call it (trust me, i'm calling it...)
         lastKeyPress = 0;
         //setting up the game
+        Random.seed = System.DateTime.Now.Millisecond;
         for (int i = 0; i < puzzleLength; i++)
         {
-            randKeys.Add(Random.Range(1, 5)); //sets the list of keys the player has to press
+            randKeys[i] = Random.Range(1, 5); //sets the list of keys the player has to press
         }
         StartCoroutine(showTiles());
         index = 0;
+        instructionsGiven = false;
     }
 
     void FixedUpdate()
@@ -56,6 +63,7 @@ public class simonsays_puzzle : MonoBehaviour
                 }
                 else if (squareInput() != 0) //if the player input a wrong AND nonzero key, then they were wrong
                 {
+                    IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
                     restart();
                 }
             }
@@ -88,7 +96,7 @@ public class simonsays_puzzle : MonoBehaviour
     IEnumerator showTiles()
     {
 
-        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0, 0, 0);
+        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         yield return new WaitForSeconds(1); //basically functions as wait(1);
         for (int i = 0; i < puzzleLength; i++) //loops through all the keys and shows each 1 at a time
         {
@@ -132,10 +140,12 @@ public class simonsays_puzzle : MonoBehaviour
         //provide feedback to the player
         StartCoroutine(restartFeedbackShower());
         //reset code, show the new code, and reset the index
-        for (int i = 0; i < puzzleLength; i++)
-        {
-            randKeys[i] = Random.Range(1, 5); //sets the list of keys the player has to press
-        }
+        //Lets not use the following commented code, so that the pattern is repeated:
+        // for (int i = 0; i < puzzleLength; i++)
+        // {
+        //     randKeys[i] = Random.Range(1, 5); //sets the list of keys the player has to press
+        // }
+        IHATEUNITYAAAAAAAAAAAAAAAA.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         StartCoroutine(showTiles());
         index = 0;
     }

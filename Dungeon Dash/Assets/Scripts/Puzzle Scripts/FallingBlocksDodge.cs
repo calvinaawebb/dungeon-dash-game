@@ -12,18 +12,19 @@ public class FallingBlocksDodge : MonoBehaviour
 
     public float timeBetweenBricks = 0.5f;
 
-    private int bricksDropped = 0;
+    public int bricksDropped = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        bricksDropped = 0;
-        StartCoroutine(DropBlock());
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(bricksDropped);
         //stuff about puzzle. Will only happen when puzzle object is turned on, so don't worry about logic.
         if (bricksDropped >= bricksNecassary)
         { //beat puzzle condition: (put in a condition using variables in this class, etc.)
@@ -49,10 +50,10 @@ public class FallingBlocksDodge : MonoBehaviour
 
     public void DecreaseScore()
     {
-        bricksDropped -= 2;
+        bricksDropped -= 1;
     }
 
-    IEnumerator DropBlock()
+    public IEnumerator DropBlock()
     {
         yield return new WaitForSeconds(timeBetweenBricks);
         GameObject brick = Instantiate(brickPrefab, new Vector3(Random.Range(-0.9f, 0.9f) + this.transform.position.x, 1.26100004f + this.transform.position.y, 0f), new Quaternion(0, 0, 0, 1), this.transform);

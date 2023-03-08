@@ -36,12 +36,15 @@ public class DoorController : MonoBehaviour
         else if (puzzleObject.GetComponent<simonsays_puzzle>() != null)
         {
             simonsays_puzzle puzzleScript = puzzleObject.GetComponent<simonsays_puzzle>();
+            puzzleScript.newGame();
             puzzleScript.playerNum = player.player_num;
             puzzleScript.myDoor = this;
         }
         else if (puzzleObject.GetComponent<FallingBlocksDodge>() != null)
         {
             FallingBlocksDodge puzzleScript = puzzleObject.GetComponent<FallingBlocksDodge>();
+            puzzleScript.bricksDropped = 0;
+            StartCoroutine(puzzleScript.DropBlock());
             puzzleScript.playerNum = player.player_num;
             puzzleScript.myDoor = this;
         }

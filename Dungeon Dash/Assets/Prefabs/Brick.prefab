@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPuzzle: {fileID: 0}
-  speed: 0.0055
+  speed: 0.007
 --- !u!50 &2738379017494590490
 Rigidbody2D:
   serializedVersion: 4

@@ -39,6 +39,7 @@ public class DodgeBrick : MonoBehaviour
 
         else if (other.gameObject.name == "Player")
         {
+            myPuzzle.DecreaseScore();
             Debug.Log("hit player");
             isDead = true;
             this.transform.GetChild(1).gameObject.SetActive(true); //red shield
