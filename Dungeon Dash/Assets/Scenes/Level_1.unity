@@ -814,9 +814,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027a8c10c9a9746f7970e0abf94d4d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startVelocity: -3.74
+  startVelocity: 0.17
   spinAccleration: 0.0006
-  jolt: 0.01
+  jolt: 0.015
   playerNum: 0
   myDoor: {fileID: 360460538}
   myDial: {fileID: 2820934}
@@ -1896,9 +1896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027a8c10c9a9746f7970e0abf94d4d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startVelocity: -3.74
+  startVelocity: 0.17
   spinAccleration: 0.0006
-  jolt: 0.01
+  jolt: 0.015
   playerNum: 0
   myDoor: {fileID: 360460538}
   myDial: {fileID: 599671955}

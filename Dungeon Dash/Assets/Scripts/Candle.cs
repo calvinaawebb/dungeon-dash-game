@@ -6,7 +6,7 @@ public class Candle : MonoBehaviour
 {
 
     public Vector3 expandedSize = new Vector3(15, 15, 1);
-    public float time = 20;
+    public float time = 19;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +30,34 @@ public class Candle : MonoBehaviour
     IEnumerator WaitUntilEnd(Transform trans)
     {
         Vector3 oldSize = trans.localScale;
+        Vector3 alertSize = new Vector3(expandedSize.x - 3, expandedSize.y - 3, 1);
         trans.localScale = expandedSize;
         yield return new WaitForSeconds(time);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = expandedSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = expandedSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = expandedSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.3f);
+        trans.localScale = expandedSize;
+        yield return new WaitForSeconds(0.25f);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.2f);
+        trans.localScale = expandedSize;
+        yield return new WaitForSeconds(0.15f);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.1f);
+        trans.localScale = alertSize;
+        yield return new WaitForSeconds(0.05f);
         trans.localScale = oldSize;
+
     }
 }
