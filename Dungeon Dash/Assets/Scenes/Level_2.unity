@@ -13990,6 +13990,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1018938498}
+    - target: {fileID: 8932868835780515200, guid: da25e166e9e454954adff809f796c5a8, type: 3}
+      propertyPath: m_Text
+      value: NEXT
+      objectReference: {fileID: 0}
     - target: {fileID: 8932868836880807971, guid: da25e166e9e454954adff809f796c5a8, type: 3}
       propertyPath: m_Name
       value: Canvas

@@ -223,6 +223,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 691342663}
+    - target: {fileID: 8932868835780515200, guid: da25e166e9e454954adff809f796c5a8, type: 3}
+      propertyPath: m_Text
+      value: NEXT
+      objectReference: {fileID: 0}
     - target: {fileID: 8932868836880807975, guid: da25e166e9e454954adff809f796c5a8, type: 3}
       propertyPath: m_RootOrder
       value: 19
